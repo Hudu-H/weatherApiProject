@@ -10,7 +10,7 @@ body {
   font-size: 120%; }
   body .card {
     background: #000000d0;
-    color: white;
+    color: #fff;
     padding: 32px;
     border-radius: 30px;
     width: 100%;
@@ -25,8 +25,8 @@ body {
         outline: none;
         padding: 7px 16px;
         border-radius: 24px;
-        background: #7c7c7c2b;
-        color: white;
+        background: #7c7c7c6b;
+        color: #fff;
         font-family: inherit;
         font-size: 105%;
         width: calc(100%-100px); }
@@ -38,7 +38,7 @@ body {
         width: 44px;
         outline: none;
         background: #7c7c7c2b;
-        color: white;
+        color: #fff;
         cursor: pointer;
         transition: 0.2s ease-in-out; }
         body .card .search button:hover {
