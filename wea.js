@@ -1,3 +1,4 @@
+// fetch weather data
 let weather = {
   apiKey: "1365c68e3f688236f5e083df3a316a78",
   fetchWeather: function (city) {
@@ -10,6 +11,7 @@ let weather = {
       .then((response) => response.json())
       .then((data) => this.displayWeather(data));
   },
+
   displayWeather: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -27,6 +29,8 @@ let weather = {
       "Wind speed: " + speed + " km/h";
     document.querySelector(".weather").classList.remove("loading");
   },
+
+  // fetch data through input
   search: function () {
     this.fetchWeather(document.querySelector(".search-box").value);
   },
@@ -44,7 +48,7 @@ document
   });
 weather.fetchWeather("Barcelona");
 
-// time function part
+// time function
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;
@@ -56,11 +60,9 @@ function startTime() {
   var today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
-  var s = today.getSeconds();
-  // add a zero in front of numbers<10
   m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+
+  document.getElementById("time").innerHTML = h + ":" + m;
   t = setTimeout(function () {
     startTime();
   }, 500);
